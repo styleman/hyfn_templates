@@ -1,3 +1,3 @@
 #import "../../../_theme/theme.js"
 
-alert 'You Suck'
+console.log 'You Suck'
