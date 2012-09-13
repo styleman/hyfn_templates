@@ -1,0 +1,131 @@
+// COMPASS
+@import compass
+// BASE THEME
+@import ../../../_theme/theme
+
+$temp_color: #d3d3d3
+$temp_color2: #ffffff
+$temp_width: 656px
+$temp_margin: (154px / 2)
+$temp_padding: 15px
+
+
+/* OVERRIDES */
+body
+	background: #ccc
+	color: $temp_color
+	font-size: 14px
+
+p
+	font-weight: normal
+	font-size: 1em
+
+.module
+	display: block
+	clear: both
+	width: $temp_width
+	background: none
+	border: none
+	margin: 0 $temp_margin
+
+.gradient
+	@include background-image(linear-gradient(#666, #222 45%, #222 60%, #666))
+
+.gradient_dark
+	@include background-image(linear-gradient(#666, #222 70%))
+
+.bottom_shadow
+	@include box-shadow(rgba(#000, 0.7) 0 5px 15px)
+
+/* SHARE */
+.share_module
+	padding: 10px 0 60px
+
+	.share_link
+		&.facebook
+		&.tweet
+
+/* YOUTUBE */
+.youtube_module
+	margin: 20px $temp_margin
+	padding: $temp_padding
+	width: $temp_width - ($temp_padding * 2)
+	@extend .gradient
+
+	iframe
+		width: 100%
+		height: 380px
+		background: #000
+
+
+/* MENU */
+.menu_module
+	padding: 8px 0 6px
+	width: 713px
+	border: 0px
+
+	nav
+		margin: 20px auto
+		text-align: center
+
+		ul
+			text-align: center
+			margin: 0 auto
+			display: table
+
+			li
+				display: table-cell
+
+				a
+					padding: 0
+					text-transform: uppercase
+					font-weight: normal
+					font-size: 0.875em
+					color: $temp_color2
+
+					&:hover, &.active
+						text-decoration: underline
+
+					&:before
+						content: '|'
+						margin: 0 30px
+
+				&:first-child a
+					&:before
+						content: ''
+						margin: 0
+
+/* SECTION */
+.special_module
+	padding: 0 
+	
+	.special_part
+		float: right
+		margin-left: $temp_padding
+		padding: 0
+		width: 208px
+		min-height: 300px
+		@extend .gradient
+
+		&:first-child
+			float: left
+			margin-left: 0px
+
+		h1, img, p
+			margin: 0
+			padding: $temp_padding
+
+		h1
+			font-weight: normal
+			font-style: italic
+			font-size: 1.3em
+			text-transform: capitalize
+			@extend .gradient_dark
+			@extend .bottom_shadow
+
+		img
+			height: auto
+
+		p
+			padding-top: 0
+
