@@ -1,0 +1,75 @@
+// COMPASS
+@import compass
+// BASE THEME
+@import ../../../_theme/theme
+
+$temp_color: #f6f6f6
+$temp_color2: #858585
+$temp_width: 656px
+$temp_margin: (154 / 2)px
+$temp_padding: 10px
+
+/* OVERRIDES */
+body
+	background: #ccc
+
+.module
+	width: $temp_width
+	background: none
+	border: none
+	margin: 0 $temp_margin
+
+/* SHARE */
+.share_module
+	margin: 10px 0 60px
+
+	.share_link
+		&.facebook
+		&.tweet
+
+/* YOUTUBE */
+.youtube_module
+	margin: 20px $temp_margin
+	padding: $temp_padding
+	width: $temp_width - ($temp_padding * 2)
+	@include background-image(linear-gradient(white, #aaaaaa))
+
+
+/* MENU */
+.menu_module
+	padding: 8px 0 6px
+	width: 713px
+	border: 0px
+
+	nav
+		text-align: center
+
+		ul
+			text-align: center
+			margin: 0 auto
+			display: table
+
+			li
+				display: table-cell
+
+				a
+					padding: 0
+					display: block
+					text-decoration: none
+					text-transform: uppercase
+					font-weight: normal
+					font-size: 1.2em
+					line-height: 100%
+					color: $temp_color2
+
+					&:hover, &.active
+						text-decoration: underline
+
+					&:before
+						content: '|'
+						margin: 0 30px
+
+				&:first-child a
+					&:before
+						content: ''
+						margin: 0
