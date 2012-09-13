@@ -14,6 +14,8 @@ $temp_padding: 15px
 body
 	background: #ccc
 	color: $temp_color
+	font-family: "Helvetica Neue", sans-serif
+	font-weight: 300
 	font-size: 14px
 
 p
@@ -32,7 +34,7 @@ p
 	@include background-image(linear-gradient(#666, #222 45%, #222 60%, #666))
 
 .gradient_dark
-	@include background-image(linear-gradient(#666, #222 70%))
+	@include background-image(linear-gradient(#666 30%, #333 95%))
 
 .bottom_shadow
 	@include box-shadow(rgba(#000, 0.7) 0 5px 15px)
@@ -79,6 +81,7 @@ p
 				a
 					padding: 0
 					text-transform: uppercase
+					font-family: 'Arial Narrow', sans-serif
 					font-weight: normal
 					font-size: 0.875em
 					color: $temp_color2
@@ -97,8 +100,8 @@ p
 
 /* SECTION */
 .special_module
-	padding: 0 
-	
+	padding: 0
+
 	.special_part
 		float: right
 		margin-left: $temp_padding
@@ -122,6 +125,7 @@ p
 			text-transform: capitalize
 			@extend .gradient_dark
 			@extend .bottom_shadow
+			@include text-shadow(rgba(#000, 0.4) 0 2px 0, rgba(#000, 0.2) 0px 3px 0)
 
 		img
 			height: auto

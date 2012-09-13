@@ -959,6 +959,8 @@ div.gfc-result {
 body {
   background: #cccccc;
   color: #d3d3d3;
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 300;
   font-size: 14px;
 }
 
@@ -986,12 +988,12 @@ p {
 }
 
 .gradient_dark, .special_module .special_part h1 {
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #666666), color-stop(70%, #222222));
-  background-image: -webkit-linear-gradient(#666666, #222222 70%);
-  background-image: -moz-linear-gradient(#666666, #222222 70%);
-  background-image: -o-linear-gradient(#666666, #222222 70%);
-  background-image: -ms-linear-gradient(#666666, #222222 70%);
-  background-image: linear-gradient(#666666, #222222 70%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(30%, #666666), color-stop(95%, #333333));
+  background-image: -webkit-linear-gradient(#666666 30%, #333333 95%);
+  background-image: -moz-linear-gradient(#666666 30%, #333333 95%);
+  background-image: -o-linear-gradient(#666666 30%, #333333 95%);
+  background-image: -ms-linear-gradient(#666666 30%, #333333 95%);
+  background-image: linear-gradient(#666666 30%, #333333 95%);
 }
 
 .bottom_shadow, .special_module .special_part h1 {
@@ -1038,6 +1040,7 @@ p {
 .menu_module nav ul li a {
   padding: 0;
   text-transform: uppercase;
+  font-family: "Arial Narrow", sans-serif;
   font-weight: normal;
   font-size: 0.875em;
   color: white;
@@ -1078,6 +1081,7 @@ p {
   font-style: italic;
   font-size: 1.3em;
   text-transform: capitalize;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 2px 0, rgba(0, 0, 0, 0.2) 0px 3px 0;
 }
 .special_module .special_part img {
   height: auto;
