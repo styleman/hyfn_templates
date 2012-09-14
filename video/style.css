@@ -1077,6 +1077,7 @@ p {
   padding: 15px;
 }
 .special_module .special_part h1 {
+  padding: 10px 15px;
   font-weight: normal;
   font-style: italic;
   font-size: 1.3em;

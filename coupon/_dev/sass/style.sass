@@ -3,11 +3,14 @@
 // BASE THEME
 @import ../../../_theme/theme
 
-$temp_color: #d3d3d3
+$temp_color: #270301
 $temp_color2: #ffffff
-$temp_width: 656px
-$temp_margin: (154px / 2)
+$temp_width: 790px
+$temp_margin: (20px / 2)
 $temp_padding: 15px
+$temp_border: 10px
+$temp_border_color: #fdf6e6
+$temp_background_color: #f4f0e7
 
 
 /* OVERRIDES */
@@ -16,10 +19,6 @@ body
 	color: $temp_color
 	font-size: 14px
 
-p
-	font-weight: normal
-	font-size: 1em
-
 .module
 	display: block
 	clear: both
@@ -27,6 +26,7 @@ p
 	background: none
 	border: none
 	margin: 0 $temp_margin
+	padding: 0
 
 .gradient
 	@include background-image(linear-gradient(#666, #222 45%, #222 60%, #666))
@@ -34,35 +34,69 @@ p
 .gradient_dark
 	@include background-image(linear-gradient(#666, #222 70%))
 
-.bottom_shadow
-	@include box-shadow(rgba(#000, 0.7) 0 5px 15px)
+.inner_shadow
+	@include box-shadow(rgba(#000, 0.2) 0 0 7px 2px inset)
 
 /* SHARE */
 .share_module
-	padding: 10px 0 60px
+	padding: 10px 0 30px
 
 	.share_link
 		&.facebook
 		&.tweet
 
-/* YOUTUBE */
-.youtube_module
-	margin: 20px $temp_margin
-	padding: $temp_padding
-	width: $temp_width - ($temp_padding * 2)
-	@extend .gradient
 
-	iframe
-		width: 100%
-		height: 380px
-		background: #000
+/* DOUBLE IMAGE */
+.double_image_module
+	margin: 20px $temp_margin 0
+	padding: $temp_padding 0
+	width: $temp_width
 
+	img
+		border: $temp_border solid $temp_border_color
+		background: $temp_background_color
+
+		&.left
+			float: left
+
+		&.right
+			float: right
+
+
+/* SECTION */
+.special_module
+	border: $temp_border solid $temp_border_color
+	background: $temp_background_color
+	display: inline-block
+	padding: $temp_padding / 4
+	width: $temp_width - ($temp_border * 2) - ($temp_padding / 2)
+	@extend .inner_shadow
+
+	img
+		float: left
+		padding: 0
+		margin: 0
+
+	p, h1
+		width: 380px
+		float: right
+		padding: 0 20px
+		color: $temp_color
+		font-weight: normal
+
+	h1
+		font-weight: normal
+		font-style: italic
+		font-size: 1.3em
+		text-transform: capitalize
+		text-align: center
+
+	p
+		font-size: 0.85em
 
 /* MENU */
 .menu_module
 	padding: 8px 0 6px
-	width: 713px
-	border: 0px
 
 	nav
 		margin: 20px auto
@@ -94,38 +128,4 @@ p
 					&:before
 						content: ''
 						margin: 0
-
-/* SECTION */
-.special_module
-	padding: 0 
-	
-	.special_part
-		float: right
-		margin-left: $temp_padding
-		padding: 0
-		width: 208px
-		min-height: 300px
-		@extend .gradient
-
-		&:first-child
-			float: left
-			margin-left: 0px
-
-		h1, img, p
-			margin: 0
-			padding: $temp_padding
-
-		h1
-			font-weight: normal
-			font-style: italic
-			font-size: 1.3em
-			text-transform: capitalize
-			@extend .gradient_dark
-			@extend .bottom_shadow
-
-		img
-			height: auto
-
-		p
-			padding-top: 0
 
