@@ -9,6 +9,9 @@ $temp_width: 656px
 $temp_margin: (154px / 2)
 $temp_padding: 15px
 
+/* FONTS */
++font-face("raleway", font-files("raleway_thin-webfont.ttf", "raleway_thin-webfont.woff"), "raleway_thin-webfont.eot")
+
 
 /* OVERRIDES */
 body
@@ -17,6 +20,7 @@ body
 	font-family: "Helvetica Neue", sans-serif
 	font-weight: 300
 	font-size: 14px
+	font-family: raleway
 
 p
 	font-weight: normal
@@ -43,9 +47,18 @@ p
 .share_module
 	padding: 10px 0 60px
 
+	.share_links
+		li
+			float: left
+
 	.share_link
+		width: 20px
+		height: 26px
+
 		&.facebook
+			background: url("img/fb_icon.png") center bottom no-repeat transparent
 		&.tweet
+			background: url("img/twitter_icon.png") center bottom no-repeat transparent
 
 /* YOUTUBE */
 .youtube_module
@@ -122,8 +135,10 @@ p
 			padding: ($temp_padding - 5) $temp_padding
 			font-weight: normal
 			font-style: italic
-			font-size: 1.3em
+			font-size: 1.4em
 			text-transform: capitalize
+			letter-spacing: 0em
+			color: $temp_color2
 			@extend .gradient_dark
 			@extend .bottom_shadow
 			@include text-shadow(rgba(#000, 0.4) 0 2px 0, rgba(#000, 0.2) 0px 3px 0)

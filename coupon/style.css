@@ -713,7 +713,6 @@ input[type="submit"] {
 
 /* sweeps form module */
 .sweeps_registration_module {
-  padding: 25px 35px;
   min-width: 340px;
   min-height: 470px;
 }
@@ -923,11 +922,25 @@ div.gfc-result {
   height: 600px;
 }
 
+/* FONTS */
+@font-face {
+  font-family: "goudy";
+  src: url('../fonts/goudybookletter1911-webfont.eot');
+  src: url('../fonts/goudybookletter1911-webfont.eot?#iefix') format('eot'), url('../fonts/goudybookletter1911-webfont.ttf') format('truetype'), url('../fonts/goudybookletter1911-webfont.woff') format('woff'), url('../fonts/goudybookletter1911-webfont.svg') format('svg');
+}
+
+@font-face {
+  font-family: "script";
+  src: url('../fonts/greatvibes-regular-webfont.eot');
+  src: url('../fonts/greatvibes-regular-webfont.eot?#iefix') format('eot'), url('../fonts/greatvibes-regular-webfont.ttf') format('truetype'), url('../fonts/greatvibes-regular-webfont.woff') format('woff'), url('../fonts/greatvibes-regular-webfont.svg') format('svg');
+}
+
 /* OVERRIDES */
 body {
   background: #cccccc;
-  color: #270301;
+  color: #2c2b2b;
   font-size: 14px;
+  font-family: goudy;
 }
 
 .module {
@@ -966,7 +979,20 @@ body {
 
 /* SHARE */
 .share_module {
-  padding: 10px 0 30px;
+  padding: 10px 0 40px;
+}
+.share_module .share_links li {
+  float: left;
+}
+.share_module .share_link {
+  width: 20px;
+  height: 26px;
+}
+.share_module .share_link.facebook {
+  background: url("img/fb_icon.png") center bottom no-repeat transparent;
+}
+.share_module .share_link.tweet {
+  background: url("img/twitter_icon.png") center bottom no-repeat transparent;
 }
 
 /* DOUBLE IMAGE */
@@ -1003,18 +1029,20 @@ body {
   width: 380px;
   float: right;
   padding: 0 20px;
-  color: #270301;
+  color: #2c2b2b;
   font-weight: normal;
 }
 .special_module h1 {
+  margin-top: 5px;
   font-weight: normal;
-  font-style: italic;
-  font-size: 1.3em;
-  text-transform: capitalize;
+  font-size: 2.8em;
+  font-family: script;
+  text-transform: none;
   text-align: center;
 }
 .special_module p {
-  font-size: 0.85em;
+  font-size: 0.9em;
+  line-height: 1.6em;
 }
 
 /* MENU */
