@@ -3,11 +3,13 @@
 // BASE THEME
 @import ../../../_theme/theme
 
-$temp_color: #d3d3d3
+$temp_color: #868990
+$temp_light_color: #b0c4f8
+$temp_dark_color: #425c9e
 $temp_color2: #ffffff
-$temp_width: 656px
-$temp_margin: (154px / 2)
-$temp_padding: 15px
+$temp_width: 640px
+$temp_margin: (170px / 2)
+$temp_padding: 20px
 
 
 /* OVERRIDES */
@@ -61,7 +63,7 @@ p
 /* MENU */
 .menu_module
 	padding: 8px 0 6px
-	width: 713px
+	width: $temp_width
 	border: 0px
 
 	nav
@@ -80,7 +82,7 @@ p
 					padding: 0
 					text-transform: uppercase
 					font-weight: normal
-					font-size: 0.875em
+					font-size: 1.1em
 					color: $temp_color2
 
 					&:hover, &.active
@@ -88,7 +90,7 @@ p
 
 					&:before
 						content: '|'
-						margin: 0 30px
+						margin: 0 20px
 
 				&:first-child a
 					&:before
