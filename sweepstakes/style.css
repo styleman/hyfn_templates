@@ -713,7 +713,6 @@ input[type="submit"] {
 
 /* sweeps form module */
 .sweeps_registration_module {
-  padding: 25px 35px;
   min-width: 340px;
   min-height: 470px;
 }
@@ -923,11 +922,31 @@ div.gfc-result {
   height: 600px;
 }
 
+/* FONTS */
+@font-face {
+  font-family: "pt-sans";
+  src: url('../fonts/pt_sans-narrow-web-regular-webfont.eot');
+  src: url('../fonts/pt_sans-narrow-web-regular-webfont.eot?#iefix') format('eot'), url('../fonts/pt_sans-narrow-web-regular-webfont.ttf') format('truetype'), url('../fonts/pt_sans-narrow-web-regular-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: "raleway";
+  src: url('../fonts/raleway_thin-webfont.eot');
+  src: url('../fonts/raleway_thin-webfont.eot?#iefix') format('eot'), url('../fonts/raleway_thin-webfont.ttf') format('truetype'), url('../fonts/raleway_thin-webfont.woff') format('woff');
+}
+
+@font-face {
+  font-family: "blair";
+  src: url('../fonts/BlairMdITC.eot');
+  src: url('../fonts/BlairMdITC.eot?#iefix') format('eot'), url('../fonts/BlairMdITC.ttf') format('truetype'), url('../fonts/BlairMdITC.woff') format('woff');
+}
+
 /* OVERRIDES */
 body {
   background: #cccccc;
   color: #868990;
   font-size: 14px;
+  font-family: raleway;
 }
 
 p {
@@ -940,11 +959,10 @@ p {
   clear: both;
   width: 640px;
   background: none;
-  border: none;
   margin: 0 85px;
 }
 
-.gradient, .youtube_module, .special_module .special_part {
+.gradient, .banner_module .special_part {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #666666), color-stop(45%, #222222), color-stop(60%, #222222), color-stop(100%, #666666));
   background-image: -webkit-linear-gradient(#666666, #222222 45%, #222222 60%, #666666);
   background-image: -moz-linear-gradient(#666666, #222222 45%, #222222 60%, #666666);
@@ -953,7 +971,7 @@ p {
   background-image: linear-gradient(#666666, #222222 45%, #222222 60%, #666666);
 }
 
-.gradient_dark, .special_module .special_part h1 {
+.gradient_dark, .banner_module .special_part h1 {
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #666666), color-stop(70%, #222222));
   background-image: -webkit-linear-gradient(#666666, #222222 70%);
   background-image: -moz-linear-gradient(#666666, #222222 70%);
@@ -962,7 +980,7 @@ p {
   background-image: linear-gradient(#666666, #222222 70%);
 }
 
-.bottom_shadow, .special_module .special_part h1 {
+.bottom_shadow, .banner_module .special_part h1 {
   -webkit-box-shadow: rgba(0, 0, 0, 0.7) 0 5px 15px;
   -moz-box-shadow: rgba(0, 0, 0, 0.7) 0 5px 15px;
   box-shadow: rgba(0, 0, 0, 0.7) 0 5px 15px;
@@ -971,18 +989,6 @@ p {
 /* SHARE */
 .share_module {
   padding: 10px 0 60px;
-}
-
-/* YOUTUBE */
-.youtube_module {
-  margin: 20px 85px;
-  padding: 20px;
-  width: 600px;
-}
-.youtube_module iframe {
-  width: 100%;
-  height: 380px;
-  background: black;
 }
 
 /* MENU */
@@ -1006,8 +1012,8 @@ p {
 .menu_module nav ul li a {
   padding: 0;
   text-transform: uppercase;
-  font-weight: normal;
   font-size: 1.1em;
+  font-family: pt-sans;
   color: white;
 }
 .menu_module nav ul li a:hover, .menu_module nav ul li a.active {
@@ -1023,33 +1029,154 @@ p {
 }
 
 /* SECTION */
-.special_module {
-  padding: 0;
+.banner_module {
+  text-transform: uppercase;
+  text-align: center;
+  background: white;
+  border: 20px solid white;
+  width: 600px;
 }
-.special_module .special_part {
+.banner_module .title_1 {
+  font-size: 2.1em;
+  color: #b0c4f8;
+}
+.banner_module .title_2 {
+  font-size: 4em;
+  color: #425c9e;
+  font-family: pt-sans;
+}
+.banner_module .title_3 {
+  position: relative;
+  top: 0;
+  left: -80px;
+  width: 760px;
+  min-height: 80px;
+  max-height: 80px;
+  padding: 10px 0;
+  font-size: 3.5em;
+  font-family: blair;
+  color: white;
+  background: url("img/banner.png") no-repeat transparent;
+  text-shadow: rgba(0, 0, 0, 0.3) 0 2px 5px;
+}
+.banner_module img {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 15px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 2px 15px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 2px 15px;
+}
+.banner_module p {
+  text-transform: none;
+  padding: 15px 0 0;
+  text-align: left;
+}
+.banner_module .special_part {
   float: right;
   margin-left: 20px;
   padding: 0;
   width: 208px;
   min-height: 300px;
 }
-.special_module .special_part:first-child {
+.banner_module .special_part:first-child {
   float: left;
   margin-left: 0px;
 }
-.special_module .special_part h1, .special_module .special_part img, .special_module .special_part p {
+.banner_module .special_part h1, .banner_module .special_part img, .banner_module .special_part p {
   margin: 0;
   padding: 20px;
 }
-.special_module .special_part h1 {
+.banner_module .special_part h1 {
   font-weight: normal;
   font-style: italic;
   font-size: 1.3em;
   text-transform: capitalize;
 }
-.special_module .special_part img {
+.banner_module .special_part img {
   height: auto;
 }
-.special_module .special_part p {
+.banner_module .special_part p {
   padding-top: 0;
+}
+
+/* SWEEPS */
+.holder {
+  margin: 30px auto 20px;
+  /* IMAGE */
+}
+.holder .sweeps_registration_module {
+  float: left;
+  background: white;
+  border: 20px solid white;
+  min-width: 0;
+  width: 320px;
+  margin: 0;
+}
+.holder .sweeps_registration_module h2 {
+  font-size: 1.5em;
+  font-family: pt-sans;
+  color: #b0c4f8;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.holder .sweeps_registration_module .form_wrap {
+  background: none;
+  border: 0;
+  padding: 0;
+}
+.holder .sweeps_registration_module .form_wrap form {
+  font-size: 0.85em;
+}
+.holder .sweeps_registration_module .form_wrap form .row {
+  border: none;
+  padding: 2px 5px;
+  margin: 10px 0;
+}
+.holder .sweeps_registration_module .form_wrap form .row label {
+  padding-top: 5px;
+}
+.holder .sweeps_registration_module .form_wrap form .row input:focus {
+  outline: 2px solid #aaaaaa;
+}
+.holder .sweeps_registration_module .form_wrap form .row input[type=text] {
+  width: 100%;
+  height: 30px;
+  padding: 10px 15px;
+  border: 1px solid #aaaaaa;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  -ms-border-radius: 4px / 4px;
+  -o-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+}
+.holder .sweeps_registration_module .form_wrap form .row label {
+  color: #aaaaaa;
+}
+.holder .sweeps_registration_module .form_wrap form .row input[type=checkbox] {
+  margin-top: 2px;
+  border: 1px solid #aaaaaa;
+}
+.holder .sweeps_registration_module .form_wrap form .row input[type=submit] {
+  display: block;
+  float: right;
+  margin: 0;
+  padding: 4px 15px 0;
+  height: 30px;
+  border: 1px solid #aaaaaa;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px / 4px;
+  -ms-border-radius: 4px / 4px;
+  -o-border-radius: 4px / 4px;
+  border-radius: 4px / 4px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(80%, #cccccc));
+  background-image: -webkit-linear-gradient(#ffffff, #cccccc 80%);
+  background-image: -moz-linear-gradient(#ffffff, #cccccc 80%);
+  background-image: -o-linear-gradient(#ffffff, #cccccc 80%);
+  background-image: -ms-linear-gradient(#ffffff, #cccccc 80%);
+  background-image: linear-gradient(#ffffff, #cccccc 80%);
+}
+.holder .image_module {
+  clear: none;
+  float: right;
+  border: 15px solid white;
+  width: auto;
+  margin: 0;
 }

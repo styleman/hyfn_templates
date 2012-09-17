@@ -1,3 +1,7 @@
-Themes are built off a slimmed down version of CSS.
+Project is using Compass & Sass
 
-Using Compass & Sass
+-- COMPASS --
+DOWNLOAD - $ gem install compass
+HELP - http://compass-style.org/install/
+
+

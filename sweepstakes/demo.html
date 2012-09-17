@@ -20,38 +20,81 @@
 			</div>
 
 			<!-- CUSTOM MODULE -->
-			<div class="module special_module" id="menu_6021" data-category="menu" data-init="1" >
-				<div class="special_part">
-					<h1>About Us</h1>
-					<img src="img/s1_img.jpg">
-					<p>Lorem ipsum dolor sit amet, consectetu adipiscing elit. Nulla at dolor lectus. Maugue ipsum, hendrerit dapibus dignissim sit amet, ornare id enim.</p>
-				</div>
+			<div class="module banner_module" id="menu_6021" data-category="menu" data-init="1" >
+				<h1 class='title_1'>Caribbean Lifestyles Presents</h1>
+				<h1 class='title_2'>The Ultimate Getaway</h1>
+				<h1 class='title_3'>Sweepstakes</h1>
 
-				<div class="special_part">
-					<h1>Features</h1>
-					<img src="img/s2_img.jpg">
-					<p>Lorem ipsum dolor sit amet, consectetu adipiscing elit. Nulla at dolor lectus. Maugue ipsum, hendrerit dapibus dignissim sit amet, ornare id enim.</p>
-				</div>
+				<img src="img/s1_img.jpg">
 
-				<div class="special_part">
-					<h1>Contact</h1>
-					<img src="img/s3_img.jpg">
-					<p>Lorem ipsum dolor sit amet, consectetu adipiscing elit. Nulla at dolor lectus. Maugue ipsum, hendrerit dapibus dignissim sit amet, ornare id enim.</p>
-				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat.</p>
 			</div>
 
 
-			<!-- SWEEPSTAKES -->
-			<div class="module sweeps_module" id="youtube_8652" data-category="youtube" data-init="1">
-				<iframe width="460" height="300" src="https://www.youtube.com/embed/J---aiyznGQ?noauto=1&amp;rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen=""></iframe>
+			<!-- CONTAINER(.holder) -->
+			<div class='module holder'>
+				<!-- SWEEPSTAKES -->
+				<div class="module sweeps_registration_module" style="left:;top:;" id="fields_sweeps_registration_49" data-category="sweeps_registration" data-init="1">
+					<div class="mainview">
+						<h2>Register</h2>
+						<p>Please fill out the form below.</p>
+
+						<div class="form_wrap">
+							<form accept-charset="UTF-8" action="/apps/widget_form" data-remote="true" method="post">
+								<div style="margin:0;padding:0;display:inline">
+									<input name="utf8" type="hidden" value="✓"><input name="authenticity_token" type="hidden" value="lcQv2swqxtTMUkkeKhcPx1F/RGJQzGnu8zuYTt13zew=">
+								</div>
+								<div class="row">
+											<label class="label overlabel" for="data_first-name">First name</label>
+											<input class="text_input" id="data_first-name" name="data[first-name]" type="text" value=""><input id="validation_data_first-name" name="validation_data[first-name]" type="hidden" value="none"><input id="required_data_first-name" name="required_data[first-name]" type="hidden">
+								</div>
+								<div class="row">
+									<label class="label overlabel" for="data_last-name">Last name</label>
+									<input class="text_input" id="data_last-name" name="data[last-name]" type="text" value=""><input id="validation_data_last-name" name="validation_data[last-name]" type="hidden" value="none"><input id="required_data_last-name" name="required_data[last-name]" type="hidden">
+								</div>
+								<div class="row">
+									<label class="label overlabel" for="data_email-address">Email Address</label>
+									<input class="text_input" id="data_email-address" name="data[email-address]" type="text" value=""><input id="validation_data_email-address" name="validation_data[email-address]" type="hidden" value="none"><input id="required_data_email-address" name="required_data[email-address]" type="hidden">
+								</div>
+
+
+								<div class="row clearfix">
+									<input id="accept_terms" name="data[accept_terms]" type="hidden" value="0"><input type="checkbox" id="accept_terms" name="data[accept_terms]" value="1"><label for="accept_terms">I accept the <a href="&lt;p&gt;Initial%20content&lt;/p&gt;" target="_blank">terms and conditions</a></label>
+								</div>
+
+								<div class="row">
+										<input class="submit_button" name="commit" type="submit" value="Submit">
+								</div>
+
+								<span id="message_49" class="info"></span>
+							</form>
+						</div>
+					</div>
+
+					<div class="form_wrap clearfix success_messaging subview" style="display:none;">
+						<div class="success_wrap">
+							<div class="row module_head">
+								<h2>Thank You!</h2>
+							</div>
+
+							<div class="row">
+								<a href="#" class="share_link facebook" onclick="javascript:postToFeed()">Facebook</a>
+								<iframe allowtransparency="true" frameborder="0" scrolling="no" src="http://platform.twitter.com/widgets/tweet_button.1347008535.html#_=1347903068260&amp;count=horizontal&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=http%3A%2F%2Flocalhost%3A3000%2Fbuild_apps%2Fpage%2F7%2Fapp_category%2F2%2Fwidgets_app%2F6%2Fcanvas%3Fv%3Df5f711bf7203cae92361caa942699cd0&amp;size=m&amp;text=Blank%20Canvas%20App&amp;url=http%3A%2F%2Flocalhost%3A3000%2Fbuild_apps%2Fpage%2F7%2Fapp_category%2F2%2Fwidgets_app%2F6%2Fcanvas%3Fv%3Df5f711bf7203cae92361caa942699cd0" class="share_link tweet twitter-share-button twitter-count-horizontal" style="width: 107px; height: 20px; " title="Twitter Tweet Button" data-twttr-rendered="true"></iframe>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- IMAGE -->
+				<div class="module image_module" id="single_image_6034" data-category="single_image" data-init="1">
+					<img src="img/s3_image.jpg">
+				</div>
 			</div>
-
-
-			<!-- IMAGE -->
-			<div class="module image_module" id="single_image_6034" data-category="single_image" data-init="1">
-				<img src="img/title.png">
-			</div>
-
+			<!-- END CONTAINER -->
 
 			<!-- MENU -->
 			<div class="module mod_ed menu_module mod_edit" id="menu_6021" data-category="menu" data-init="1" >
@@ -65,7 +108,7 @@
 				</nav>
 			</div>
 
-			
+
 
 
 
